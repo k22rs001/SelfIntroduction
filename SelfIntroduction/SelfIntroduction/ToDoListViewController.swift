@@ -27,6 +27,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+//        todoList[0][1] = "aaaa"
+        
     }
     
     // セクション数を設定する
@@ -53,6 +55,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todo", for: indexPath)
         cell.textLabel?.text = todoList[indexPath.section][indexPath.row]
+        print("indexPath: \(indexPath)")
+        print("todoList: \(todoList[indexPath.section][indexPath.row])")
         return cell
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		81AC049F2BDE066100144C2D /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC049C2BDE063800144C2D /* ToDoListViewController.swift */; };
+		81AC04A12BDE170800144C2D /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC04A02BDE170800144C2D /* TimeTableViewController.swift */; };
+		81AC04A72BDF625900144C2D /* aViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC04A62BDF625900144C2D /* aViewController.swift */; };
 		81D6E06B2BDA0DB0005ABB02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D6E06A2BDA0DB0005ABB02 /* AppDelegate.swift */; };
 		81D6E06D2BDA0DB0005ABB02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D6E06C2BDA0DB0005ABB02 /* SceneDelegate.swift */; };
 		81D6E06F2BDA0DB0005ABB02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D6E06E2BDA0DB0005ABB02 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		81AC049C2BDE063800144C2D /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		81AC04A02BDE170800144C2D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		81AC04A62BDF625900144C2D /* aViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aViewController.swift; sourceTree = "<group>"; };
 		81D6E0672BDA0DB0005ABB02 /* SelfIntroduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfIntroduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D6E06A2BDA0DB0005ABB02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D6E06C2BDA0DB0005ABB02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		81D6E05E2BDA0DB0005ABB02 = {
 			isa = PBXGroup;
 			children = (
+				81AC04A62BDF625900144C2D /* aViewController.swift */,
+				81AC04A02BDE170800144C2D /* TimeTableViewController.swift */,
 				81D6E0692BDA0DB0005ABB02 /* SelfIntroduction */,
 				81D6E0802BDA0DB2005ABB02 /* SelfIntroductionTests */,
 				81D6E08A2BDA0DB2005ABB02 /* SelfIntroductionUITests */,
@@ -264,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AC04A72BDF625900144C2D /* aViewController.swift in Sources */,
 				81D6E06F2BDA0DB0005ABB02 /* ViewController.swift in Sources */,
 				81D6E09B2BDA33AD005ABB02 /* CounterViewController.swift in Sources */,
+				81AC04A12BDE170800144C2D /* TimeTableViewController.swift in Sources */,
 				81D6E06B2BDA0DB0005ABB02 /* AppDelegate.swift in Sources */,
 				81AC049F2BDE066100144C2D /* ToDoListViewController.swift in Sources */,
 				81D6E06D2BDA0DB0005ABB02 /* SceneDelegate.swift in Sources */,
