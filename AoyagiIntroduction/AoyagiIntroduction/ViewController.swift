@@ -10,12 +10,10 @@ import SwiftUI
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var helloLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        helloLabel.text = "こんにちは"
+//        helloLabel.text = "こんにちは"
     }
     
     @IBAction func weatherButtonTapped(_ sender: UIButton) {
