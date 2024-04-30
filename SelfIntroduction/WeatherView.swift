@@ -9,7 +9,7 @@ import SwiftUI
 import WeatherKit    // ----①
 import CoreLocation
 
-struct weatherView: View {
+struct WeatherView: View {
     @State var currentWeather: CurrentWeather?    // ----②
     
     var body: some View {

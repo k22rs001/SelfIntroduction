@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func weatherButtonTapped(_ sender: UIButton) {
-        let view = UIHostingController(rootView: weatherView())
+        let view = UIHostingController(rootView: WeatherView())
         self.navigationController?.pushViewController(view, animated: true)
 //        view.modalPresentationStyle = .fullScreen
 //        self.present(view, animated: true)

@@ -43,6 +43,7 @@
 		81236A6C2BDF9048009A0F7F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		81AC049C2BDE063800144C2D /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		81AC04A02BDE170800144C2D /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		81D0843C2BE0E33500EFB493 /* SelfIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelfIntroduction.entitlements; sourceTree = "<group>"; };
 		81D6E0672BDA0DB0005ABB02 /* SelfIntroduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfIntroduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D6E06A2BDA0DB0005ABB02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D6E06C2BDA0DB0005ABB02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		81D6E0692BDA0DB0005ABB02 /* SelfIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				81D0843C2BE0E33500EFB493 /* SelfIntroduction.entitlements */,
 				81D6E06A2BDA0DB0005ABB02 /* AppDelegate.swift */,
 				81D6E06C2BDA0DB0005ABB02 /* SceneDelegate.swift */,
 				81D6E06E2BDA0DB0005ABB02 /* ViewController.swift */,
@@ -456,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SelfIntroduction/SelfIntroduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
@@ -485,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SelfIntroduction/SelfIntroduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
