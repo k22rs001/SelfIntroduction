@@ -21,19 +21,19 @@ class CounterViewController: UIViewController {
     @IBAction func plusButtonTapped(_ sender: UIButton) {
         counterNumber += 1
         countLabel.text = "\(counterNumber)"
-        if counterNumber == 20 {
-            correctLabel.isHidden = false
-        } else {
-            correctLabel.isHidden = true
-        }
+//        if counterNumber == 20 {
+//            correctLabel.isHidden = false
+//        } else {
+//            correctLabel.isHidden = true
+//        }
     }
     @IBAction func minusButtonTapped(_ sender: UIButton) {
         counterNumber -= 1
         countLabel.text = "\(counterNumber)"
-        if counterNumber == 20 {
-            correctLabel.isHidden = false
-        } else {
-            correctLabel.isHidden = true
-        }
+//        if counterNumber == 20 {
+//            correctLabel.isHidden = false
+//        } else {
+//            correctLabel.isHidden = true
+//        }
     }
 }

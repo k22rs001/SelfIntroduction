@@ -6,19 +6,24 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var helloLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         helloLabel.text = "こんにちは"
     }
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        
-    }
     
+    @IBAction func weatherButtonTapped(_ sender: UIButton) {
+        let view = UIHostingController(rootView: weatherView())
+        self.navigationController?.pushViewController(view, animated: true)
+//        view.modalPresentationStyle = .fullScreen
+//        self.present(view, animated: true)
+    }
+
 }
 

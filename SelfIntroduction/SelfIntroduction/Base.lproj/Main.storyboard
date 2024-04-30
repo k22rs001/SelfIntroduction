@@ -26,35 +26,28 @@
                                 <rect key="frame" x="0.0" y="446.33333333333331" width="393" height="84.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBM-W8-XP0">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Counter"/>
                                         <connections>
                                             <segue destination="O9e-xi-KLC" kind="show" id="OC6-oj-2uG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkW-x6-0EK">
-                                        <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="85"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="TimeTable"/>
-                                        <connections>
-                                            <segue destination="bB3-en-qt6" kind="show" id="qaE-8J-D9S"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-2a-gkA">
-                                        <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="85"/>
+                                        <rect key="frame" x="131" y="0.0" width="131" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="ToDoList"/>
                                         <connections>
                                             <segue destination="pWb-EU-rs7" kind="show" id="a1v-uC-yhL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9A-BG-7CZ">
-                                        <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="85"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w92-NZ-Rtw">
+                                        <rect key="frame" x="262" y="0.0" width="131" height="85"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Alarm"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Weather"/>
                                         <connections>
-                                            <segue destination="FvP-2P-qGI" kind="show" id="NKk-6P-uUB"/>
+                                            <action selector="weatherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8YZ-hH-8F4"/>
+                                            <segue destination="Wgb-es-W4g" kind="show" id="BPr-FN-crM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -85,6 +78,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="570.2290076335878" y="-108.45070422535211"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mMx-5t-hZO">
+            <objects>
+                <viewController id="Wgb-es-W4g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Hs-JI-RTb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="K6X-VF-RuE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eyk-QO-6Ju"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIq-O7-MGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="-98"/>
         </scene>
         <!--counter-->
         <scene sceneID="STS-sV-4n2">
@@ -165,61 +174,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1b-kT-0Vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1323" y="-760"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zeT-Ap-gto">
-            <objects>
-                <viewController id="FvP-2P-qGI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WEQ-ZU-Q61">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="goW-Wj-scO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iYF-wT-4vn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kRp-ca-G4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1323" y="1401"/>
-        </scene>
-        <!--Time Table View Controller-->
-        <scene sceneID="ui6-aE-WZJ">
-            <objects>
-                <viewController id="bB3-en-qt6" customClass="TimeTableViewController" customModule="SelfIntroduction" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bVu-5v-DHX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeTable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H9-oF-FE2">
-                                <rect key="frame" x="158.33333333333334" y="123" width="76.666666666666657" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-3Q-z5X">
-                                <rect key="frame" x="0.0" y="111" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lc6-3Q-z5X" id="yji-tL-nF4">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="7Qh-h6-B0f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4H9-oF-FE2" firstAttribute="centerX" secondItem="bVu-5v-DHX" secondAttribute="centerX" id="2iK-ac-S4r"/>
-                            <constraint firstItem="4H9-oF-FE2" firstAttribute="top" secondItem="7Qh-h6-B0f" secondAttribute="top" constant="20" id="tST-CR-UHv"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="lZH-Tn-7nR"/>
-                    <connections>
-                        <outlet property="timeTableLabel" destination="4H9-oF-FE2" id="yxP-aC-YU8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lcw-ls-9TY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1323" y="-90"/>
         </scene>
         <!--To Do List View Controller-->
         <scene sceneID="Sx8-f3-LwT">
