@@ -1,14 +1,14 @@
 //
-//  SelfIntroductionTests.swift
-//  SelfIntroductionTests
+//  AoyagiIntroductionTests.swift
+//  AoyagiIntroductionTests
 //
-//  Created by Takayuki Aoyagi   on 2024/04/25.
+//  Created by Abe on R 6/04/30.
 //
 
 import XCTest
-@testable import SelfIntroduction
+@testable import AoyagiIntroduction
 
-final class SelfIntroductionTests: XCTestCase {
+final class AoyagiIntroductionTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

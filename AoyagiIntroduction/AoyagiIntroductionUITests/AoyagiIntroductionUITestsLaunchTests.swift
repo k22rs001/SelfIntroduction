@@ -1,13 +1,13 @@
 //
-//  SelfIntroductionUITestsLaunchTests.swift
-//  SelfIntroductionUITests
+//  AoyagiIntroductionUITestsLaunchTests.swift
+//  AoyagiIntroductionUITests
 //
-//  Created by Takayuki Aoyagi   on 2024/04/25.
+//  Created by Abe on R 6/04/30.
 //
 
 import XCTest
 
-final class SelfIntroductionUITestsLaunchTests: XCTestCase {
+final class AoyagiIntroductionUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

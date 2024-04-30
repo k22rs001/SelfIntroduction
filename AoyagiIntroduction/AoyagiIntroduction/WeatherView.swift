@@ -50,3 +50,7 @@ struct WeatherView: View {
         }
     }
 }
+
+#Preview {
+    WeatherView()
+}

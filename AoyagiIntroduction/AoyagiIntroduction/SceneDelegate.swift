@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  SelfIntroduction
+//  AoyagiIntroduction
 //
-//  Created by Takayuki Aoyagi   on 2024/04/25.
+//  Created by Abe on R 6/04/30.
 //
 
 import UIKit
