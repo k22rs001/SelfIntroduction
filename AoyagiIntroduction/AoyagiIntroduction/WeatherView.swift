@@ -17,7 +17,7 @@ struct WeatherView: View {
         ["city" : "FUKUOKA", "latitude" : 33.590188 , "longitude" : 130.420685]
     ]
     
-    var numbers : [Int] = [1,2,3,4,5]
+    //var numbers : [Int] = [1,2,3,4,5]
     
     var body: some View {
         VStack {
@@ -71,7 +71,13 @@ struct WeatherView: View {
     
     func getWeather() async {    // ----③
         let weatherService = WeatherService()
-        let point = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
+        //選択された都市の座標を取得
+        guard let selectedCityIndex = points.indices.contains(selection) ? selection : nil,
+              let latitude = points[selectedCityIndex]["latitude"] as? Double,
+              let longitude = points[selectedCityIndex]["longitude"] as? Double else {
+            return
+        }
+        let point = CLLocation(latitude: latitude, longitude: longitude) // 東京駅と博多駅
         do {
             let weather = try await weatherService.weather(for: point, including: .current)    // ----④
             currentWeather = weather
