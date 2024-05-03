@@ -21,30 +21,33 @@ struct WeatherView: View {
     
     var body: some View {
         VStack {
-            Form {
-                if let weather = currentWeather {    // ----④
-                    Section {
-                        // 気温
-                        Label(weather.temperature.formatted(), systemImage: "thermometer")
-                        // 湿度
-                        Label("\(Int(weather.humidity * 100))%", systemImage: "humidity.fill")
-                        // 日中か夜間か
-                        Label(weather.isDaylight ? "Day time" : "Night time", systemImage: weather.isDaylight ? "sun.max.fill" : "moon.stars.fill")
-                    } header: {
-                        HStack {
-                            Spacer()
-                            // 天気のシンボル
-                            Image(systemName: weather.symbolName)
-                                .font(.system(size: 64))
-                            Spacer()
+            ZStack {
+                Form {
+                    if let weather = currentWeather {    // ----④
+                        Section {
+                            // 気温
+                            Label(weather.temperature.formatted(), systemImage: "thermometer")
+                            // 湿度
+                            Label("\(Int(weather.humidity * 100))%", systemImage: "humidity.fill")
+                            // 日中か夜間か
+                            Label(weather.isDaylight ? "Day time" : "Night time", systemImage: weather.isDaylight ? "sun.max.fill" : "moon.stars.fill")
+                        } header: {
+                            HStack {
+                                Spacer()
+                                // 天気のシンボル
+                                Image(systemName: weather.symbolName)
+                                    .font(.system(size: 64))
+                                Spacer()
+                            }
                         }
                     }
                 }
+                .task {
+                    // 現在の気象データを取得
+                    await getWeather()
             }
-            .task {
-                // 現在の気象データを取得
-                await getWeather()
             }
+            
             Picker(
                 selection: $selection, label: Text("Animal")
             ) {
@@ -57,14 +60,15 @@ struct WeatherView: View {
                         Text(city).tag(index)
                     }
                 }
-                //                Text("Dog 🐶").tag(0)
-                //                Text("Cat 🐱").tag(1)
-                //                Text("Rabbit 🐰").tag(2)
-                //                Text("Turtle 🐢").tag(3)
-                //                Text("Rizard 🦎").tag(4)
-                //                Text("Snake 🐍").tag(5)
+                
+                
             }
             .pickerStyle(WheelPickerStyle())
+            .onChange(of: selection) {
+                Task {
+                    await getWeather()
+                }
+            }
         }
         
     }
@@ -77,10 +81,12 @@ struct WeatherView: View {
               let longitude = points[selectedCityIndex]["longitude"] as? Double else {
             return
         }
+        
         let point = CLLocation(latitude: latitude, longitude: longitude) // 東京駅と博多駅
         do {
             let weather = try await weatherService.weather(for: point, including: .current)    // ----④
             currentWeather = weather
+            print("\(weather)")
         } catch {
             print(error)
         }
