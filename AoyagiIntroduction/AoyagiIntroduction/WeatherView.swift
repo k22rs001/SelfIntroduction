@@ -46,7 +46,7 @@ struct WeatherView: View {
                 .task {
                     // 現在の気象データを取得
                     await getWeather()
-            }
+                }
             }
             
             Picker(

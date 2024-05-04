@@ -10,6 +10,12 @@ import CoreLocation
 
 struct DailyWeatherView: View {
     @State var dayWeathers: [DayWeather] = []    // ----①
+    @State var selection = 0
+    
+    let points = [
+        ["city" : "TOKYO", "latitude" : 35.6809591, "longitude" : 139.7673068],
+        ["city" : "FUKUOKA", "latitude" : 33.590188 , "longitude" : 130.420685]
+    ]
     
     var body: some View {
         Form {
@@ -31,11 +37,33 @@ struct DailyWeatherView: View {
             // 日々の気象データを取得
             await getWeather()
         }
+        Picker(
+            selection: $selection, label: Text("Animal")
+        ) {
+            ForEach(0..<points.count, id: \.self) { index in
+                if let city = points[index]["city"] as? String {
+                    Text(city).tag(index)
+                }
+            }
+        }
+        .pickerStyle(WheelPickerStyle())
+        //値を監視対象に設定
+        .onChange(of: selection) {
+            Task {
+                await getWeather()
+            }
+        }
     }
+    
     
     func getWeather() async {
         let weatherService = WeatherService()
-        let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
+        guard let selectedCityIndex = points.indices.contains(selection) ? selection : nil,
+              let latitude = points[selectedCityIndex]["latitude"] as? Double,
+              let longitude = points[selectedCityIndex]["longitude"] as? Double else {
+            return
+        }
+        let location = CLLocation(latitude: latitude, longitude: longitude) // 東京駅と博多駅
         do {
             let weather = try await weatherService.weather(for: location, including: .daily)    // ----②
             dayWeathers = weather.forecast
