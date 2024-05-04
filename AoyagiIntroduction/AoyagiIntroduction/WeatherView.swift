@@ -9,6 +9,7 @@ import SwiftUI
 import WeatherKit    // ----①
 import CoreLocation
 
+
 struct WeatherView: View {
     @State var currentWeather: CurrentWeather?    // ----②
     @State var selection = 0
