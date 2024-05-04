@@ -64,6 +64,7 @@ struct WeatherView: View {
                 
             }
             .pickerStyle(WheelPickerStyle())
+            //値を監視対象に設定
             .onChange(of: selection) {
                 Task {
                     await getWeather()
@@ -92,6 +93,7 @@ struct WeatherView: View {
         }
     }
 }
+
 
 #Preview {
     WeatherView()

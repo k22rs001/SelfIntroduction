@@ -19,6 +19,7 @@
 		30028D0A2BE0FC7700C4088C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D072BE0FC7700C4088C /* ToDoListViewController.swift */; };
 		30028D0B2BE0FC7700C4088C /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D082BE0FC7700C4088C /* CounterViewController.swift */; };
 		30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D0C2BE0FCA800C4088C /* ViewController.swift */; };
+		81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086072BE5D16500EFB493 /* DailyWeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		30028D082BE0FC7700C4088C /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		30028D0C2BE0FCA800C4088C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81D0843D2BE0FE1200EFB493 /* AoyagiIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AoyagiIntroduction.entitlements; sourceTree = "<group>"; };
+		81D086072BE5D16500EFB493 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				30028D072BE0FC7700C4088C /* ToDoListViewController.swift */,
 				30028D042BE0FC7000C4088C /* WeatherView.swift */,
 				30028D0C2BE0FCA800C4088C /* ViewController.swift */,
+				81D086072BE5D16500EFB493 /* DailyWeatherView.swift */,
 				30028CDA2BE0FB7500C4088C /* Main.storyboard */,
 				30028CDD2BE0FB7700C4088C /* Assets.xcassets */,
 				30028CDF2BE0FB7700C4088C /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */,
+				81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */,
 				30028D0B2BE0FC7700C4088C /* CounterViewController.swift in Sources */,
 				30028CD52BE0FB7500C4088C /* AppDelegate.swift in Sources */,
 				30028CD72BE0FB7500C4088C /* SceneDelegate.swift in Sources */,
