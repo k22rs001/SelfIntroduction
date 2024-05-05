@@ -38,7 +38,7 @@ struct DailyWeatherView: View {
             await getWeather()
         }
         Picker(
-            selection: $selection, label: Text("Animal")
+            selection: $selection, label: Text("")
         ) {
             ForEach(0..<points.count, id: \.self) { index in
                 if let city = points[index]["city"] as? String {
