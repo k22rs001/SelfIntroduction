@@ -50,7 +50,7 @@ struct WeatherView: View {
             }
             
             Picker(
-                selection: $selection, label: Text("Animal")
+                selection: $selection, label: Text("")
             ) {
                 //                ForEach(numbers, id: \.self){ number in
                 //                    Text("\(number)")
