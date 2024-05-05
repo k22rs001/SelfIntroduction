@@ -11,10 +11,10 @@ class CalculatorView: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    private var numberOnScreen: Int = 0
-    private var previousNumber: Int = 0
+    private var numberOnScreen  = 0.0
+    private var previousNumber  = 0.0
     private var performingMath = false
-    private var operation = 0
+    private var operation = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,11 @@ class CalculatorView: UIViewController {
     @IBAction func showNumber(_ sender: UIButton) {
         if performingMath == true {
             label.text = String(sender.tag - 1)
-            numberOnScreen = Int(label.text!)!
+            numberOnScreen = Double(label.text!)!
             performingMath = false
         }else {
             label.text = label.text! + String(sender.tag - 1)
-            numberOnScreen = Int(label.text!)!
+            numberOnScreen = Double(label.text!)!
         }
         
     }
@@ -41,7 +41,7 @@ class CalculatorView: UIViewController {
     //各計算ボタンが押された時の処理
     @IBAction func calcAction(_ sender: UIButton) {
         if label.text != "" && sender.tag != 11 && sender.tag != 16 {
-            previousNumber = Int(label.text!)!
+            previousNumber = Double(label.text!)!
             //labelに表示する文字を決める
             switch(sender.tag) {
             case 12:
@@ -55,7 +55,7 @@ class CalculatorView: UIViewController {
             default:
                 break
             }
-            operation = sender.tag
+            operation = (Double(sender.tag))
             performingMath = true
         }else if sender.tag == 16 {
             //計算ボタン(=)が押された時の処理
@@ -74,9 +74,9 @@ class CalculatorView: UIViewController {
         }else if sender.tag == 11 {
             //(C)が押されたら全てを初期値に戻す
             label.text = ""
-            previousNumber = 0
-            numberOnScreen = 0
-            operation = 0
+            previousNumber = 0.0
+            numberOnScreen = 0.0
+            operation = 0.0
         }
     }
     
