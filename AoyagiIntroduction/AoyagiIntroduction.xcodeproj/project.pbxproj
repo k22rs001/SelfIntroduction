@@ -21,6 +21,7 @@
 		30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D0C2BE0FCA800C4088C /* ViewController.swift */; };
 		81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086072BE5D16500EFB493 /* DailyWeatherView.swift */; };
 		81D086412BE5F2FF00EFB493 /* DayWeatherGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */; };
+		81D086792BE72C6500EFB493 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086782BE72C6500EFB493 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		81D0843D2BE0FE1200EFB493 /* AoyagiIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AoyagiIntroduction.entitlements; sourceTree = "<group>"; };
 		81D086072BE5D16500EFB493 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherGraphView.swift; sourceTree = "<group>"; };
+		81D086782BE72C6500EFB493 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				81D086072BE5D16500EFB493 /* DailyWeatherView.swift */,
 				81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */,
 				30028CDA2BE0FB7500C4088C /* Main.storyboard */,
+				81D086782BE72C6500EFB493 /* CalculatorView.swift */,
 				30028CDD2BE0FB7700C4088C /* Assets.xcassets */,
 				30028CDF2BE0FB7700C4088C /* LaunchScreen.storyboard */,
 				30028CE22BE0FB7700C4088C /* Info.plist */,
@@ -282,6 +285,7 @@
 				30028CD72BE0FB7500C4088C /* SceneDelegate.swift in Sources */,
 				30028D0A2BE0FC7700C4088C /* ToDoListViewController.swift in Sources */,
 				30028D052BE0FC7000C4088C /* WeatherView.swift in Sources */,
+				81D086792BE72C6500EFB493 /* CalculatorView.swift in Sources */,
 				81D086412BE5F2FF00EFB493 /* DayWeatherGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
