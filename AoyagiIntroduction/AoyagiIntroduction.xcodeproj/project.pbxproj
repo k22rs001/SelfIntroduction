@@ -19,6 +19,7 @@
 		30028D0A2BE0FC7700C4088C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D072BE0FC7700C4088C /* ToDoListViewController.swift */; };
 		30028D0B2BE0FC7700C4088C /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D082BE0FC7700C4088C /* CounterViewController.swift */; };
 		30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D0C2BE0FCA800C4088C /* ViewController.swift */; };
+		81B7E6432BEA1DB0005DEE4E /* DayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */; };
 		81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086072BE5D16500EFB493 /* DailyWeatherView.swift */; };
 		81D086412BE5F2FF00EFB493 /* DayWeatherGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */; };
 		81D086792BE72C6500EFB493 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086782BE72C6500EFB493 /* CalculatorView.swift */; };
@@ -58,6 +59,7 @@
 		30028D072BE0FC7700C4088C /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		30028D082BE0FC7700C4088C /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		30028D0C2BE0FCA800C4088C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherView.swift; sourceTree = "<group>"; };
 		81D0843D2BE0FE1200EFB493 /* AoyagiIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AoyagiIntroduction.entitlements; sourceTree = "<group>"; };
 		81D086072BE5D16500EFB493 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherGraphView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				30028D0C2BE0FCA800C4088C /* ViewController.swift */,
 				81D086072BE5D16500EFB493 /* DailyWeatherView.swift */,
 				81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */,
+				81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */,
 				30028CDA2BE0FB7500C4088C /* Main.storyboard */,
 				81D086782BE72C6500EFB493 /* CalculatorView.swift */,
 				30028CDD2BE0FB7700C4088C /* Assets.xcassets */,
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B7E6432BEA1DB0005DEE4E /* DayWeatherView.swift in Sources */,
 				30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */,
 				81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */,
 				30028D0B2BE0FC7700C4088C /* CounterViewController.swift in Sources */,
