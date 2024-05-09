@@ -16,11 +16,11 @@ struct DayWeatherView: View {
         ZStack{
             GeometryReader { geometry in
                 
-                                Image("rain")
-                                    .resizable()    // 画像サイズをフレームサイズに合わせる
-                                //                    .frame(width: geometry.size.width, height: geometry.size.height)     // フレームサイズの指定
-                                    .scaledToFill()
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Image("rain")
+                    .resizable()    // 画像サイズをフレームサイズに合わせる
+                    .frame(width: geometry.size.width, height: geometry.size.height)     // フレームサイズの指定
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 VStack {
                     VStack{
                         Text("TOKYO").font(.largeTitle)
@@ -58,22 +58,6 @@ struct DayWeatherView: View {
                                 }
                                 .padding()
                                 .background()
-                                //                                LabeledContent {
-                                //                                    // 天気
-                                //                                    Text(weather.condition.description)
-                                //                                    // 降水確率
-                                //                                    Text("\(Int((weather.precipitationChance*100)))%")
-                                //                                    // 天気のシンボル
-                                //                                    Image(systemName: weather.symbolName)
-                                //                                } label: {
-                                //                                    // 日付
-                                //                                    Text(DateFormatter.localizedString(from: weather.date, dateStyle: .long, timeStyle: .none))
-                                //                                    Text(weather.condition.description)
-                                //                                    // 降水確率
-                                //                                    Text("\(Int((weather.precipitationChance*100)))%")
-                                //                                    // 天気のシンボル
-                                //                                    Image(systemName: weather.symbolName)
-                                //                                }
                             }
                         }
                         .task {
