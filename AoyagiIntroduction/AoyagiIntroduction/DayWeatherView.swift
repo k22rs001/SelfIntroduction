@@ -11,7 +11,12 @@ import CoreLocation
 
 struct DayWeatherView: View {
     @State var dayWeathers: [DayWeather] = []
-
+    @State var todayTemperature = String()
+    let points = [
+        ["city" : "TOKYO", "latitude" : 35.6809591, "longitude" : 139.7673068],
+        ["city" : "FUKUOKA", "latitude" : 33.590188 , "longitude" : 130.420685]
+    ]
+    
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -28,11 +33,10 @@ struct DayWeatherView: View {
                     .foregroundColor(.black)
                     .frame(width: geometry.size.width * 0.8, alignment: .leading)
                     .padding(.top, 70)
-                    
                     HStack {
                         VStack {
-                            Text("3°").font(.largeTitle)
-                            Text("a")
+                            Text(todayTemperature)
+                            Text("")
                         }
                         .foregroundStyle(.white)
                         .frame(width: geometry.size.width * 0.5, alignment: .leading)
@@ -66,7 +70,8 @@ struct DayWeatherView: View {
                                     Image(systemName: weather.symbolName)
                                 }
                                 .foregroundColor(.white)
-                                .padding(.top, 150)
+                                .padding(.top, 50)
+                                //.background(.blue)
                             }
                         }
                         .task {
@@ -81,25 +86,27 @@ struct DayWeatherView: View {
         }
     }
     
-    func getWeather() async {
-        let weatherService = WeatherService()
-        let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
-        do {
-            let weather = try await weatherService.weather(for: location, including: .daily)
-            dayWeathers = weather.forecast
-        } catch {
-            print(error)
+        func getWeather() async {
+            let weatherService = WeatherService()
+            let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
+            do {
+                let weather = try await weatherService.weather(for: location, including: .daily) // 週間天気予報
+                let todayWeather = try await weatherService.weather(for: location)
+                dayWeathers = weather.forecast
+                todayTemperature = todayWeather.currentWeather.temperature.formatted()
+            } catch {
+                print(error)
+            }
+        }
+        
+        // 日付を曜日と日にちのみにフォーマットする関数
+        private func formatDate(_ date: Date) -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E, MMM d" // 曜日と日にちのみにフォーマット
+            return dateFormatter.string(from: date)
         }
     }
     
-    // 日付を曜日と日にちのみにフォーマットする関数
-    private func formatDate(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E, MMM d" // 曜日と日にちのみにフォーマット
-        return dateFormatter.string(from: date)
+    #Preview {
+        DayWeatherView()
     }
-}
-
-#Preview {
-    DayWeatherView()
-}

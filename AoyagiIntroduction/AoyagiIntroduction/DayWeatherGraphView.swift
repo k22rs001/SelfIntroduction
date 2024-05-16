@@ -25,11 +25,11 @@ struct DayWeatherGraphView: View {
                         )
                         .foregroundStyle(Color.blue.gradient)
                         
-                        PointMark(    // ----①
+                        PointMark(
                             x: .value("日付", weather.date, unit: .day),
                             y: .value("最高気温", weather.highTemperature.value)
                         )
-                        .annotation(position: .overlay, alignment: .bottom) {   // ----②
+                        .annotation(position: .overlay, alignment: .bottom) {
                             VStack(spacing: 2) {
                                 // 天気のシンボルをアイコン画像で表示
                                 Image(systemName: weather.symbolName)
@@ -38,7 +38,7 @@ struct DayWeatherGraphView: View {
                             }
                             .imageScale(.large)
                         }
-                        .symbolSize(0)   // ----③
+                        .symbolSize(0)
                     }
                 }
                 .navigationTitle("WeatherKit Sample")
@@ -55,7 +55,7 @@ struct DayWeatherGraphView: View {
         let weatherService = WeatherService()
         let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
         do {
-            let weather = try await weatherService.weather(for: location, including: .daily)    // ----②
+            let weather = try await weatherService.weather(for: location, including: .daily)
             dayWeathers = weather.forecast
         } catch {
             print(error)
