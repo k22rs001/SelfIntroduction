@@ -8,14 +8,14 @@
 import SwiftUI
 import WeatherKit
 import CoreLocation
-import Charts    // ----①
+import Charts
 
 struct DayWeatherGraphView: View {
     @State var dayWeathers: [DayWeather] = []
     
     var body: some View {
-        NavigationStack{
-            VStack(alignment: .leading, spacing: 8){
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 8) {
                 VStack {
                     Chart(dayWeathers, id: \.self.date) { weather in
                         BarMark(
@@ -62,7 +62,6 @@ struct DayWeatherGraphView: View {
         }
     }
 }
-
 
 #Preview {
     DayWeatherGraphView()

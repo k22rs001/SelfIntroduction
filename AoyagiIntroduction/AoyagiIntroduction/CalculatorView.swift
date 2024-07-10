@@ -61,7 +61,7 @@ class CalculatorView: UIViewController {
             //計算ボタン(=)が押された時の処理
             switch(operation) {
             case 12:
-                label.text = String(previousNumber / numberOnScreen)
+                label.text = String(round(previousNumber / numberOnScreen))
             case 13:
                 label.text = String(previousNumber * numberOnScreen)
             case 14:

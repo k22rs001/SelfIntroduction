@@ -19,6 +19,10 @@
 		30028D0A2BE0FC7700C4088C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D072BE0FC7700C4088C /* ToDoListViewController.swift */; };
 		30028D0B2BE0FC7700C4088C /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D082BE0FC7700C4088C /* CounterViewController.swift */; };
 		30028D0D2BE0FCA800C4088C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30028D0C2BE0FCA800C4088C /* ViewController.swift */; };
+		8165120E2C20257300FCAB2A /* WeatherSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165120D2C20257300FCAB2A /* WeatherSample.swift */; };
+		81AAF7E62C329CDA007CA45A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAF7E52C329CDA007CA45A /* WeatherModel.swift */; };
+		81AAF7E82C329D4A007CA45A /* WeatherModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAF7E72C329D4A007CA45A /* WeatherModelView.swift */; };
+		81AAF7EA2C32AEB1007CA45A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAF7E92C32AEB1007CA45A /* MapView.swift */; };
 		81B7E6432BEA1DB0005DEE4E /* DayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */; };
 		81D086082BE5D16500EFB493 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086072BE5D16500EFB493 /* DailyWeatherView.swift */; };
 		81D086412BE5F2FF00EFB493 /* DayWeatherGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D086402BE5F2FF00EFB493 /* DayWeatherGraphView.swift */; };
@@ -59,6 +63,10 @@
 		30028D072BE0FC7700C4088C /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		30028D082BE0FC7700C4088C /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		30028D0C2BE0FCA800C4088C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8165120D2C20257300FCAB2A /* WeatherSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSample.swift; sourceTree = "<group>"; };
+		81AAF7E52C329CDA007CA45A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		81AAF7E72C329D4A007CA45A /* WeatherModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelView.swift; sourceTree = "<group>"; };
+		81AAF7E92C32AEB1007CA45A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherView.swift; sourceTree = "<group>"; };
 		81D0843D2BE0FE1200EFB493 /* AoyagiIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AoyagiIntroduction.entitlements; sourceTree = "<group>"; };
 		81D086072BE5D16500EFB493 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
@@ -126,9 +134,13 @@
 				81B7E6422BEA1DB0005DEE4E /* DayWeatherView.swift */,
 				30028CDA2BE0FB7500C4088C /* Main.storyboard */,
 				81D086782BE72C6500EFB493 /* CalculatorView.swift */,
+				81AAF7E52C329CDA007CA45A /* WeatherModel.swift */,
+				81AAF7E72C329D4A007CA45A /* WeatherModelView.swift */,
+				81AAF7E92C32AEB1007CA45A /* MapView.swift */,
 				30028CDD2BE0FB7700C4088C /* Assets.xcassets */,
 				30028CDF2BE0FB7700C4088C /* LaunchScreen.storyboard */,
 				30028CE22BE0FB7700C4088C /* Info.plist */,
+				8165120D2C20257300FCAB2A /* WeatherSample.swift */,
 			);
 			path = AoyagiIntroduction;
 			sourceTree = "<group>";
@@ -288,9 +300,13 @@
 				30028CD52BE0FB7500C4088C /* AppDelegate.swift in Sources */,
 				30028CD72BE0FB7500C4088C /* SceneDelegate.swift in Sources */,
 				30028D0A2BE0FC7700C4088C /* ToDoListViewController.swift in Sources */,
+				81AAF7EA2C32AEB1007CA45A /* MapView.swift in Sources */,
+				8165120E2C20257300FCAB2A /* WeatherSample.swift in Sources */,
 				30028D052BE0FC7000C4088C /* WeatherView.swift in Sources */,
 				81D086792BE72C6500EFB493 /* CalculatorView.swift in Sources */,
+				81AAF7E62C329CDA007CA45A /* WeatherModel.swift in Sources */,
 				81D086412BE5F2FF00EFB493 /* DayWeatherGraphView.swift in Sources */,
+				81AAF7E82C329D4A007CA45A /* WeatherModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +497,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,6 +527,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,7 +550,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.AoyagiIntroductionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +570,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.AoyagiIntroductionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,6 +589,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.AoyagiIntroductionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -589,6 +608,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QU5MY7WAK3;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.AoyagiIntroductionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

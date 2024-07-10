@@ -27,7 +27,8 @@ struct DayWeatherView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 VStack {
                     VStack {
-                        Text("TOKYO").font(.largeTitle)
+                        Text("")
+                            .font(.largeTitle)
                         Text("a")
                     }
                     .foregroundColor(.black)
@@ -36,6 +37,9 @@ struct DayWeatherView: View {
                     HStack {
                         VStack {
                             Text(todayTemperature)
+                                .position(x: geometry.size.width*0.17,y: geometry.size.height*0.24)
+                                .font(.system(size: geometry.size.width * 0.15))
+                                .frame(width: geometry.size.width*0.6)
                             Text("")
                         }
                         .foregroundStyle(.white)
@@ -86,27 +90,27 @@ struct DayWeatherView: View {
         }
     }
     
-        func getWeather() async {
-            let weatherService = WeatherService()
-            let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
-            do {
-                let weather = try await weatherService.weather(for: location, including: .daily) // 週間天気予報
-                let todayWeather = try await weatherService.weather(for: location)
-                dayWeathers = weather.forecast
-                todayTemperature = todayWeather.currentWeather.temperature.formatted()
-            } catch {
-                print(error)
-            }
-        }
-        
-        // 日付を曜日と日にちのみにフォーマットする関数
-        private func formatDate(_ date: Date) -> String {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "E, MMM d" // 曜日と日にちのみにフォーマット
-            return dateFormatter.string(from: date)
+    func getWeather() async {
+        let weatherService = WeatherService()
+        let location = CLLocation(latitude: 35.6809591, longitude: 139.7673068) // 東京駅
+        do {
+            let weather = try await weatherService.weather(for: location, including: .daily) // 週間天気予報
+            let todayWeather = try await weatherService.weather(for: location)
+            dayWeathers = weather.forecast
+            todayTemperature = todayWeather.currentWeather.temperature.formatted()
+        } catch {
+            print(error)
         }
     }
     
-    #Preview {
-        DayWeatherView()
+    // 日付を曜日と日にちのみにフォーマットする関数
+    private func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, MMM d" // 曜日と日にちのみにフォーマット
+        return dateFormatter.string(from: date)
     }
+}
+
+#Preview {
+    DayWeatherView()
+}
