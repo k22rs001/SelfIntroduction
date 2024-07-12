@@ -34,21 +34,18 @@ class WeatherModel: ObservableObject {
             do {
                 
                 let weather = try await weatherService.weather(for: HakataStation) // awaitを使ってWeatherService()からデータを取得
+                let hakataWeather = try await weatherService.weather(for: HakataStation, including: .daily)
+                
+                let tokyoWeather = try await weatherService.weather(for: TokyoStation, including: .hourly)
                 currentlySymbolName = weather.currentWeather.symbolName
                 
                 currentlyTemperature = weather.currentWeather.temperature.formatted()
                 
-                let hakataWeather = try await weatherService.weather(for: HakataStation, including: .daily)
-                
-                let tokyoWeather = try await weatherService.weather(for: TokyoStation, including: .hourly)
-                
                 dayWeathers = hakataWeather.forecast
                 hourlyWeathers = tokyoWeather.forecast
                 //print(hourlyWeathers)
-                
-                
-                
-                //print(dayWeathers)                  
+
+                //print(dayWeathers)
             } catch {
                 print("Error fetching weather date:", error)
             }

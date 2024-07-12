@@ -37,12 +37,11 @@ struct WeatherModelView: View {
                      Image(systemName: weather.symbolName)
                  } label: {
                      // 日付
-//                     Text(DateFormatter.localizedString(from: weather.date, dateStyle: .long, timeStyle: .none))
-                     Text("\(weather.date)")
+                     Text(DateFormatter.localizedString(from: weather.date, dateStyle: .long, timeStyle: .none))
+//                     Text("\(weather.date)")
                  }
              }
          }
-
     }
 }
 
